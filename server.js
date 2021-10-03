@@ -16,8 +16,6 @@ app.get('/', (req, res)=>{
 app.use("/router", router);
 
 
-
-
-module.exports=app.listen(process.env.PORT || 8080, ()=>{
+app.listen(process.env.PORT || 8080, ()=>{
     console.log('server corriendo en el puerto 3000')
 })
