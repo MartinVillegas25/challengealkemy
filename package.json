@@ -4,7 +4,7 @@
   "description": "challenge alkemy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "error"
   },
   "repository": {
     "type": "git",
@@ -19,14 +19,17 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-validator": "^6.12.0",
     "jwt-simple": "^0.5.6",
     "moment": "^2.29.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
+    "nodemailer": "^6.6.5",
     "nodemon": "^2.0.7",
     "sequelize": "^6.6.2",
     "sequelize-cli": "^6.2.0"
-  }
+  },
+  "devDependencies": {}
 }

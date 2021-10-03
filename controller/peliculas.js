@@ -1,6 +1,6 @@
 
-const { peliculaoserie, genero }= require('./models/index');
-
+const { peliculaoserie, genero }= require('../models/index');
+const db = require('../models');
 
 
 

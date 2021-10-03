@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('./models');
+const db = require('../models');
 const router = express.Router();
 const {check} = require('express-validator');
 const { listarPeliculas, crearPelicula, modificarPelicula, eliminarPelicula, detallePelicula, buscarPelicula } = require('../controller/peliculas');
@@ -17,7 +17,6 @@ router.post('/auth/register',[
 
 // login de usuarios
 router.post('/auth/login', login );
-
 
 // personajes
 

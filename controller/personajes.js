@@ -1,4 +1,5 @@
-const {Personajes}= require('./models/index');
+const {Personajes}= require('../models/index');
+const db = require('../models');
 
 const listarPersonajes = async (req, res)=>{
     const personajes = await Personajes.findAll({

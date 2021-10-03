@@ -1,6 +1,7 @@
 const express = require('express');
 const router = require("./routes/router");
 const app = express();
+require('dotenv').config()
 
 
 app.use(express.json());
@@ -17,6 +18,6 @@ app.use("/router", router);
 
 
 
-app.listen(3000, ()=>{
+module.exports=app.listen(process.env.PORT || 8080, ()=>{
     console.log('server corriendo en el puerto 3000')
 })

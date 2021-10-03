@@ -1,11 +1,15 @@
 
 const bcrypt = require('bcryptjs');
+const db = require('../models');
 const token = require('../middleware/token')
+const {mandarMail} = require('../middleware/nodemailer')
+const { validationResult } = require('express-validator');
 
-const { usuarios}= require('./models/index');
+const { usuarios}= require('../models/index');
 
 const registro = async (req,res)=>{
     const error = validationResult(req)
+   
     if(!error.isEmpty()){
       return res.status(404).send(error)
     }else{
@@ -20,6 +24,7 @@ const registro = async (req,res)=>{
             email,
           })
           res.status(200).send("usuario creado");
+          mandarMail(email)
       } catch (error) {
           console.error(error);
       }
